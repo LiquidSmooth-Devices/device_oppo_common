@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.liquid.device.util;
+package com.slim.device.util;
 
 import android.util.Log;
 

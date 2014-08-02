@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 Slimmroms
+ * Copyright (C) 2014 Slimroms
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.liquid.device;
+package com.slim.device;
 
 import android.app.Activity;
 import android.content.Context;
@@ -28,12 +28,12 @@ import android.os.Message;
 import android.util.Log;
 import android.view.KeyEvent;
 
-import com.liquid.device.settings.ScreenOffGesture;
+import com.slim.device.settings.ScreenOffGesture;
 
 import com.android.internal.os.DeviceKeyHandler;
 import com.android.internal.util.ArrayUtils;
-import com.android.internal.util.liquid.ButtonsConstants;
-import com.android.internal.util.liquid.LiquidActions;
+import com.android.internal.util.slim.ButtonsConstants;
+import com.android.internal.util.slim.SlimActions;
 
 public class KeyHandler implements DeviceKeyHandler {
 
@@ -73,7 +73,7 @@ public class KeyHandler implements DeviceKeyHandler {
 
         try {
             mGestureContext = mContext.createPackageContext(
-                    "com.liquid.device", Context.CONTEXT_IGNORE_SECURITY);
+                    "com.slim.device", Context.CONTEXT_IGNORE_SECURITY);
         } catch (NameNotFoundException e) {
         }
     }
@@ -125,9 +125,9 @@ public class KeyHandler implements DeviceKeyHandler {
             }
             if (action.equals(ButtonsConstants.ACTION_CAMERA)
                     || !action.startsWith("**")) {
-                LiquidActions.processAction(mContext, ButtonsConstants.ACTION_WAKE_DEVICE, false);
+                SlimActions.processAction(mContext, ButtonsConstants.ACTION_WAKE_DEVICE, false);
             }
-            LiquidActions.processAction(mContext, action, false);
+            SlimActions.processAction(mContext, action, false);
         }
     }
 
