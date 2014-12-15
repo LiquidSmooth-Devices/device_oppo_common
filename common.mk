@@ -15,8 +15,12 @@
 #
 
 # overlays
-#DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # DevicHandler
-#PRODUCT_PACKAGES += \
-#	DeviceHandler
+PRODUCT_PACKAGES += \
+	DeviceHandler
+
+# Keyhandler
+PRODUCT_PACKAGES += \
+    com.cyanogenmod.keyhandler
